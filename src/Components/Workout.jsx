@@ -4,11 +4,11 @@ import ExcerciseCard from './ExcerciseCard'
 
 const Workout = ({workout}) => {
   return (
-    <SectionWrapper header={'Welcom to'} title={['The','Danger', 'Zone']}>
+    <SectionWrapper header={'Welcome to'} title={['The','Danger', 'Zone']}>
         <div>
           {workout.map((excercise, i )=>{
             return(
-              <ExcerciseCard  key={i} excercise={excercise} />
+              <ExcerciseCard i={i}  key={i} excercise={excercise} />
             )
           })}
         </div>
