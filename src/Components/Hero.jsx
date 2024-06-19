@@ -21,7 +21,7 @@ const Hero = () => {
         with severe body dismorphia and unable to fit through doors and small
         cars
       </p>
-      <Button text='Accept & Begin' />
+      <Button func={()=>{window.location.href = '#generate'}} on text='Accept & Begin' />
     </div>
   );
 };

@@ -49,6 +49,7 @@ export default function Generator({poison, setPoison, goals, setGoals, muscles, 
 
   return (
     <SectionWrapper
+      id={'generate'}
       header="Generate Your Workout"
       title={["It's", "Huge", "O'Clock"]}
     >
