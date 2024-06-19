@@ -19,11 +19,8 @@ function Header(props) {
   );
 }
 
-export default function Generator() {
+export default function Generator({poison, setPoison, goals, setGoals, muscles, setMuscles, updateWorkout}) {
   const [showModal, setShowModal] = useState(false);
-  const [poison, setPoison] = useState("individual");
-  const [muscles, setMuscles] = useState([]);
-  const [goals, setGoals] = useState("strength_power");
 
   const toggleModal = () => {
     setShowModal(!showModal);
@@ -125,7 +122,7 @@ export default function Generator() {
         title={"Become Juggernaut"}
         description={"Select you ultimate objective"}
       />
-      <div className="grid grid-cols-3 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
           return (
             <button
@@ -143,7 +140,7 @@ export default function Generator() {
           );
         })}
       </div>
-      <Button text='Formulate'/>
+      <Button func={updateWorkout} text='Formulate'/>
     </SectionWrapper>
   );
 }

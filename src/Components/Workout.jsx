@@ -1,8 +1,18 @@
 import React from 'react'
+import SectionWrapper from './SectionWrapper'
+import ExcerciseCard from './ExcerciseCard'
 
-const Workout = () => {
+const Workout = ({workout}) => {
   return (
-    <div>Workout</div>
+    <SectionWrapper header={'Welcom to'} title={['The','Danger', 'Zone']}>
+        <div>
+          {workout.map((excercise, i )=>{
+            return(
+              <ExcerciseCard  key={i} excercise={excercise} />
+            )
+          })}
+        </div>
+    </SectionWrapper>
   )
 }
 
