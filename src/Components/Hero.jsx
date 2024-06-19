@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const Hero = () => {
   return (
@@ -20,9 +21,7 @@ const Hero = () => {
         with severe body dismorphia and unable to fit through doors and small
         cars
       </p>
-      <button className="px-8 py-4 rounded-md border-[2px] bg-slate-800 border-blue-400 border-solid blueShadow duration-200">
-        <p> Accept & Begin</p>
-      </button>
+      <Button text='Accept & Begin' />
     </div>
   );
 };
